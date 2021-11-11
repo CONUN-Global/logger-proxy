@@ -11,7 +11,7 @@ export async function saveLogger(req: Request, res: Response) {
     const data = req.body;
 
     console.log(data);
-    const client = new Client({node: 'http://3.34.176.161:9200'})
+    const client = new Client({node: 'http://localhost:9200'})
     let result = null;
     async function run (): Promise<void> {
         // Let's start by indexing some data
