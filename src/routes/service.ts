@@ -27,34 +27,6 @@ export async function saveLogger(req: Request, res: Response) {
     // console.log(resEs);
     }
    await run()
-    res.json({"Status": res.status, "Saved": result})
+    res.json({"Status": res.status, "result" : true })
 
 }
-
-
-
-function insertDataToES( data: any) {
-
-
-
-		const jsonData = JSON.stringify(data);
-
-		const options = {
-			host: 'logger.conun.io',
-			// port: explorerconfig.elasticsearch.port,
-			path: '/?pipeline=auto_now_add',
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				'Content-Length': jsonData.length
-			}
-		};
-		const htr = http.request(options, res => {
-			res.setEncoding('utf8');
-			res.on('data', chunk => {
-				console.log('saving data to ElasticSearch ' + chunk);
-			});
-		});
-		htr.write(jsonData);
-		htr.end();
-	}

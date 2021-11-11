@@ -48,9 +48,9 @@ app.use((req:Request, res: Response, next: NextFunction) => {
 // }
 
 // Security
-if (process.env.NODE_ENV === 'production') {
-    app.use(helmet());
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(helmet());
+// }
 
 // Add APIs
 const apirouter = express.Router();

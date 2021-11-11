@@ -20,8 +20,6 @@
     "exec": "./node_modules/.bin/ts-node -r tsconfig-paths/register ./src"
   },
   "_moduleAliases": {
-    "@daos": "dist/daos",
-    "@entities": "dist/entities",
     "@shared": "dist/shared",
     "@server": "dist/Server"
   },
@@ -73,7 +71,8 @@
     "jet-logger": "^1.0.6",
     "jsonfile": "^6.1.0",
     "module-alias": "^2.2.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pm2": "^5.1.2"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.2.0",
